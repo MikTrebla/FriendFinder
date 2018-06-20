@@ -43,7 +43,7 @@
             <p class='survey'>
                 <h3>Question 1</h3>
             </p>
-            <select id = 'q1' class="custom-select custom-select-sm">
+            <select id='q1' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -54,7 +54,7 @@
             <p class='survey'>
                 <h3>Question 2</h3>
             </p>
-            <select id = 'q2' class="custom-select custom-select-sm">
+            <select id='q2' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -65,7 +65,7 @@
             <p class='survey'>
                 <h3>Question 3</h3>
             </p>
-            <select id = 'q3' class="custom-select custom-select-sm">
+            <select id='q3' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -76,7 +76,7 @@
             <p class='survey'>
                 <h3>Question 4</h3>
             </p>
-            <select id = 'q4' class="custom-select custom-select-sm">
+            <select id='q4' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -87,7 +87,7 @@
             <p class='survey'>
                 <h3>Question 5</h3>
             </p>
-            <select id = 'q5' class="custom-select custom-select-sm">
+            <select id='q5' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -98,7 +98,7 @@
             <p class='survey'>
                 <h3>Question 6</h3>
             </p>
-            <select id = 'q6' class="custom-select custom-select-sm">
+            <select id='q6' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -109,7 +109,7 @@
             <p class='survey'>
                 <h3>Question 7</h3>
             </p>
-            <select id = 'q7' class="custom-select custom-select-sm">
+            <select id='q7' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -120,7 +120,7 @@
             <p class='survey'>
                 <h3>Question 8</h3>
             </p>
-            <select id = 'q8' class="custom-select custom-select-sm">
+            <select id='q8' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -131,7 +131,7 @@
             <p class='survey'>
                 <h3>Question 9</h3>
             </p>
-            <select id = 'q9' class="custom-select custom-select-sm">
+            <select id='q9' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -142,7 +142,7 @@
             <p class='survey'>
                 <h3>Question 10</h3>
             </p>
-            <select id = 'q10' class="custom-select custom-select-sm">
+            <select id='q10' class="custom-select custom-select-sm">
                 <option selected>Open this select menu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -185,11 +185,14 @@
             var addFriend = {
                 name: $('#nameInput').val().trim(),
                 photo: $('#photoLink').val().trim(),
-                score: [ $('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val(),  
-
-                ]
-            }
-        })
+                score: [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $(
+                    '#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()]
+            };
+            $.post('/api/friends', addFriend)
+                .then(function (data) {
+                    console.log('You have been added');
+                });
+        });
     </script>
 </body>
 
