@@ -1,28 +1,26 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
+let express = require("express");
+let bodyParser = require("body-parser");
+let path = require("path");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+let app = express();
+
+let htmlRoutes = require('./app/routing/htmlRoutes.js');
+let apiRoutes = require('./app/routing/apiRoutes.js');
+
+
+let PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
-app.use(bodyParser.text());
 
 
-// app.use('/', express.static('app/public'));
-// app.use('/', express.static('app/routing'));
-// app.use('/', express.static('app/data'));
 
-app.use(express.static(path.join(__dirname, './app/public')));
-// app.use(express.static(path.join(__dirname, './app/data')));
-// app.use(express.static(path.join(__dirname, './app/routing')));
+app.use('/', htmlRoutes);
+app.use('/api', apiRoutes);
 
-
-require(path.join(__dirname, './app/routing/apiRoutes'))(app);
-require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
+let data = require('./app/data/friends.js');
 
 app.listen(PORT, function () {
     console.log('APP listening on PORT ' + PORT);

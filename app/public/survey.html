@@ -26,12 +26,12 @@
         <form>
             <div class="form-group">
                 <label for="nameInput">Your Name (Required)</label>
-                <input type="email" class="form-control" id="nameInput" aria-describedby="nameHere" placeholder="Name">
+                <input type="text" class="form-control" id="nameInput" aria-describedby="nameHere" placeholder="Name">
                 <small id="nameHere" class="form-text text-muted">Please use your real name.</small>
             </div>
             <div class="form-group">
                 <label for="photoLink">A link to a photo of yourself(Required)</label>
-                <input type="password" class="form-control" id="photoLink" aria-describedby='photoHere' placeholder="Link to your photo">
+                <input type="text" class="form-control" id="photoLink" aria-describedby='photoHere' placeholder="Link to your photo">
                 <small id="photoHere" class="form-text text-muted">This is to help us find you friends!</small>
             </div>
         </form>
@@ -51,6 +51,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
+            
             <p class='survey'>
                 <h3>Question 2</h3>
             </p>
@@ -188,9 +189,10 @@
                 score: [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $(
                     '#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()]
             };
-            $.post('/api/friends', addFriend)
+            $.post('/friends', addFriend)
                 .then(function (data) {
                     console.log('You have been added');
+                    console.log(data);
                 });
         });
     </script>
