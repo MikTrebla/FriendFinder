@@ -193,7 +193,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Here goes the names of matching friend;
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -225,6 +225,7 @@
                     .then(function (data) {
                         console.log('You have been added');
                         console.log(data);
+                        $('.modal-body').text(data[i].name);
                     });
             });
         </script>

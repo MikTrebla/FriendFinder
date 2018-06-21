@@ -26,26 +26,30 @@ router.post('/friends', function (req, res) {
 
     let userScore = newFriend.score;
 
-    console.log(parseInt(userScore));
+    // console.log(parseInt(userScore));
+    let diffArr = [];
     for (let i = 0; i < data.length - 1; i++) {
-        let matchThreshold = 100;
         let difference = 0;
+        console.log(data[i].name + ' & ' + data[i].score)
         for (let j = 0; j < userScore.length; j++) {
-            console.log(difference += Math.abs(parseInt(userScore[j]) - parseInt(data[i].score[j])));
-            console.log('userScore: ' + userScore)
-            if (difference < matchThreshold) {
-                matchThreshold = difference;
-                difference = 0;
-                console.log('You matched up with : ' + data[i].name)
-                router.post('/survey', function (req, res) {
-                    let html = '<h1>' + data[i].name + '</h1>';
-                    html += '<br><img href =' + data[i].photo + '/>';
-                    res.send(html);
-                })
-            };
-
+            difference += Math.abs(userScore[j] - data[i].score[j]);
+            // console.log('userScore: ' + userScore)
         };
+        diffArr.push(difference)
+        console.log(diffArr);
     };
+
+    let lowestScore = diffArr[0];
+    for (i = 0; i < diffArr.length; i++) {
+        if (diffArr[i] < lowestScore) {
+            lowestScore = diffArr[i];
+            // console.log('You matched up with : ' + data[i].name)
+        }
+    };
+    console.log(lowestScore);
+    console.log(diffArr);
+    var match = lowestScore;
+    
 });
 
 
