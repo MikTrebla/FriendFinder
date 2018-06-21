@@ -57,13 +57,13 @@ router.post('/friends', function (req, res) {
 
 
 
-// router.get('/friends/:friends', function (req, res) {
-//     var friendName = req.params.friends;
+router.get('/friends/:friends', function (req, res) {
+    var friendName = req.params.friends;
 
-//     for (var i = 0; i < data.length; i++) {
-//         if (friendName === data[i].routeName) {
-//             return res.json(data[i]);
-//         }
-//     }
-//     return res.json(false);
-// });
+    for (var i = 0; i < data.length; i++) {
+        if (friendName === data[i].routeName) {
+            return res.json(data[i]);
+        }
+    }
+    return res.json('Not Found!');
+});
