@@ -8,12 +8,19 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+    <style>
+        #mainBody{
+            padding: 0 50px;
+        }
+
+    </style>
     <title>Survey</title>
 </head>
 
@@ -36,132 +43,147 @@
             </div>
         </form>
         <hr>
-
-
-
         <div class='surveyQuestions'>
             <p class='survey'>
                 <h3>Question 1</h3>
             </p>
-            <select id='q1' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            
+            <div class="form-group">
+                <label for="q1">Your mind is always buzzing with unexplored ideas and plans.</label>
+                <select class="form-control" id="q1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 2</h3>
             </p>
-            <select id='q2' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q2">Generally speaking, you rely more on your experience than your imagination.</label>
+                <select class="form-control" id="q2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 3</h3>
             </p>
-            <select id='q3' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                <select class="form-control" id="q3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 4</h3>
             </p>
-            <select id='q4' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q4">You rarely do something just out of sheer curiosity.</label>
+                <select class="form-control" id="q4">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 5</h3>
             </p>
-            <select id='q5' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q5">People can rarely upset you.</label>
+                <select class="form-control" id="q5">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 6</h3>
             </p>
-            <select id='q6' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q6">It is often difficult for you to relate to other people’s feelings.</label>
+                <select class="form-control" id="q6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 7</h3>
             </p>
-            <select id='q7' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q7">In a discussion, truth should be more important than people’s sensitivities.</label>
+                <select class="form-control" id="q7">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 8</h3>
             </p>
-            <select id='q8' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q8">You rarely get carried away by fantasies and ideas.</label>
+                <select class="form-control" id="q8">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 9</h3>
             </p>
-            <select id='q9' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                <select class="form-control" id="q9">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
             <p class='survey'>
                 <h3>Question 10</h3>
             </p>
-            <select id='q10' class="custom-select custom-select-sm">
-                <option selected>Open this select menu</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="form-group">
+                <label for="q10">You feel more energetic after spending time with a group of people.</label>
+                <select class="form-control" id="q10">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
         </div>
-    </div>
 
-    <br>
+        <br>
 
-    <button id='searchBtn' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        SEARCH
-    </button>
+        <button id='searchBtn' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            SEARCH
+        </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -178,24 +200,35 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <script>
-        $('#searchBtn').on('click', function (event) {
-            event.preventDefault();
-            var addFriend = {
-                name: $('#nameInput').val().trim(),
-                photo: $('#photoLink').val().trim(),
-                score: [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $(
-                    '#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()]
-            };
-            $.post('/friends', addFriend)
-                .then(function (data) {
-                    console.log('You have been added');
-                    console.log(data);
-                });
-        });
-    </script>
+        <script>
+            $('#searchBtn').on('click', function (event) {
+                console.log($(this));
+                event.preventDefault();
+
+                var addFriend = {
+                    name: $('#nameInput').val().trim(),
+                    photo: $('#photoLink').val().trim(),
+                    score: [$('#q1').val().trim(), $('#q2').val().trim(),
+                        $('#q3').val().trim(), $(
+                            '#q4').val()
+                        .trim(), $('#q5').val().trim(), $(
+                            '#q6').val().trim(), $('#q7').val().trim(),
+                        $('#q8').val().trim(), $(
+                            '#q9').val()
+                        .trim(), $('#q10').val().trim()
+                    ]
+                };
+
+                $.post('/api/friends', addFriend)
+                    .then(function (data) {
+                        console.log('You have been added');
+                        console.log(data);
+                        alert('Yes');
+                    });
+            });
+        </script>
 </body>
 
 </html>
