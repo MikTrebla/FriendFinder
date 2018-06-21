@@ -27,16 +27,23 @@ router.post('/friends', function (req, res) {
     let userScore = newFriend.score;
 
     console.log(parseInt(userScore));
-    for (var i = 0; i < data.length; i++) {
-        let matchThreshold = 40;
+    for (let i = 0; i < data.length - 1; i++) {
+        let matchThreshold = 100;
         let difference = 0;
-        console.log('data score: ' + data[i].score);
-        for (var j = 0; j < userScore.length; j++) {
+        for (let j = 0; j < userScore.length; j++) {
             console.log(difference += Math.abs(parseInt(userScore[j]) - parseInt(data[i].score[j])));
             console.log('userScore: ' + userScore)
-            if (matchThreshold > difference) {
+            if (difference < matchThreshold) {
+                matchThreshold = difference;
+                difference = 0;
+                console.log('You matched up with : ' + data[i].name)
+                router.post('/survey', function (req, res) {
+                    let html = '<h1>' + data[i].name + '</h1>';
+                    html += '<br><img href =' + data[i].photo + '/>';
+                    res.send(html);
+                })
+            };
 
-            }
         };
     };
 });
