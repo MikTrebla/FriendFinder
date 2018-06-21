@@ -7,7 +7,7 @@ let friendList = [{
     },
     {
         name: 'Albert',
-        photo: 'https://www.google.com',
+        photo: 'https://media.giphy.com/media/SozBhzSOBEqfC/giphy.gif',
         score: [
             '1', '2', '3', '4', '5', '1', '2', '3', '4', '5'
         ]

@@ -22,17 +22,14 @@ router.post('/friends', function (req, res) {
     newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
     console.log(newFriend);
     data.push(newFriend);
-    res.json(newFriend);
 
     let userScore = newFriend.score;
 
-    // console.log(parseInt(userScore));
     let diffArr = [];
     for (let i = 0; i < data.length - 1; i++) {
         let difference = 0;
         for (let j = 0; j < userScore.length; j++) {
             difference += Math.abs(userScore[j] - data[i].score[j]);
-            // console.log('userScore: ' + userScore)
         };
         diffArr.push(difference)
         console.log(diffArr);
@@ -42,18 +39,18 @@ router.post('/friends', function (req, res) {
     for (i = 0; i < diffArr.length; i++) {
         if (diffArr[i] < lowestScore) {
             lowestScore = diffArr[i];
-            // console.log('You matched up with : ' + data[i].name)
-        }
+        };
     };
-    console.log(lowestScore);
-    var match = diffArr.indexOf(lowestScore)
-    // console.log(diffArr);
-    console.log(match);
+
+    var match = diffArr.indexOf(lowestScore);
     var matchName = data[match].name;
     var photo = data[match].photo;
-    console.log(matchName)
-    console.log(photo)
-    res.render()
+
+
+    var matchInfo = {
+        result: '<h1>' + matchName + '</h1>' + '<br><img src ="' + photo + '">'
+    }
+    res.send(matchInfo.result);
 });
 
 

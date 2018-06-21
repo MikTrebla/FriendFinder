@@ -225,7 +225,7 @@
                     .then(function (data) {
                         console.log('You have been added');
                         console.log(data);
-                        $('.modal-body').text(data[i].name);
+                        $('.modal-body').html(data);
                     });
             });
         </script>
