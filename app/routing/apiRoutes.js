@@ -30,7 +30,6 @@ router.post('/friends', function (req, res) {
     let diffArr = [];
     for (let i = 0; i < data.length - 1; i++) {
         let difference = 0;
-        console.log(data[i].name + ' & ' + data[i].score)
         for (let j = 0; j < userScore.length; j++) {
             difference += Math.abs(userScore[j] - data[i].score[j]);
             // console.log('userScore: ' + userScore)
@@ -47,9 +46,14 @@ router.post('/friends', function (req, res) {
         }
     };
     console.log(lowestScore);
-    console.log(diffArr);
-    var match = lowestScore;
-    
+    var match = diffArr.indexOf(lowestScore)
+    // console.log(diffArr);
+    console.log(match);
+    var matchName = data[match].name;
+    var photo = data[match].photo;
+    console.log(matchName)
+    console.log(photo)
+    res.render()
 });
 
 
