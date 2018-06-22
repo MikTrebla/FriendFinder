@@ -8,7 +8,7 @@ let friendList = [{
     },
     {
         name: 'Albert',
-        photo: 'https://media.giphy.com/media/SozBhzSOBEqfC/giphy.gif',
+        photo: 'http://cdn.gameomg.me/c/gom/cover/97/shooter-adventure-time/shooter-adventure-time.jpg?v=1442542454',
         score: [
             '1', '2', '3', '4', '5', '1', '2', '3', '4', '5'
         ],
