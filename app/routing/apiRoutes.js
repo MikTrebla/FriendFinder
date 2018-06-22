@@ -20,7 +20,6 @@ module.exports = router;
 router.post('/friends', function (req, res) {
     let newFriend = req.body;
     newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
-    console.log(newFriend);
     data.push(newFriend);
 
     let userScore = newFriend.score;
@@ -32,7 +31,6 @@ router.post('/friends', function (req, res) {
             difference += Math.abs(userScore[j] - data[i].score[j]);
         };
         diffArr.push(difference)
-        console.log(diffArr);
     };
 
     let lowestScore = diffArr[0];
